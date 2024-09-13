@@ -1,13 +1,36 @@
-body {
+html,
+body,
+#root {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* El div principal (App) debe ocupar el espacio disponible */
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que el contenido principal ocupe el espacio restante */
+.main-content {
+  flex: 1;
+}
+
+/* Footer debe estar al final */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.custom-img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene las proporciones */
+  margin-top: 20px; /* Añade un margen superior entre el título y la imagen */
+  margin-bottom: 10px;
 }
